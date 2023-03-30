@@ -31,39 +31,83 @@ const postCard = ({ body, id, imageUrl, title }: Post) => `
 </div>
 `;
 
-const commentsIndex = () => 
-  `
-    <a class="HeaderMenu_link" href="comments.html"> </a>
-  `;
 
-const commentsCard = ({ body, id, email,postld }: Comments ) => 
+const commentsCard = ({ body, id, email }: Comments ) => 
 `<div class='comments'id='${id}'>
     <div>
-      <p>${email}: ${postld} <strong>
+      <p>${email}: <strong>
       ${body}</strong></p>
     </div>
 </div>`;
 
+const header = `
+  <header class="Header">
+    <nav class="HeaderMenu">
+        <a class="HeaderMenu_link" href="index.html"> Home</a>
+    </nav>
+  </header>
+  <section class="presentation_content">
+      <h1>
+          <a class="presentation_Title"><strong>
+              Super car<strong class="presentation_Title_sub">s</strong>.
+          </strong></a>
+      </h1>
+      <p class="presentation_Text">
+          Hello, in this blog i will 
+          introduce some of the most iconic cars in history. 
+      </p>
+  </section>
+`
+const commentsHeader = `
+  <header class="Header">
+    <nav class="HeaderMenu">
+        <a class="HeaderMenu_link" href="index.html"> Home</a>
+    </nav>
+  </header>
+  <section class="presentation_content">
+    <h1>
+        <article class="presentation_Title"><strong>
+            Super car<strong class="presentation_Title_sub">s</strong>.
+        </strong></article>
+    </h1>
+  </section>
+`
+const container = document.getElementById('main')
 
-const postsList = document.getElementById('posts-list')
+let html = ''
 
-if (postsList) {
-  let postsToHTML = ''
-
-  console.log('postsList antes do for', postsList)
+if (container) {
+  html += header
 
   for (const postData of posts) {  
-    postsToHTML += postCard(postData)
+    html += postCard(postData)
   }
+  html += `
+    <footer>rodapé</footer>
+  `
 
-  console.log('postsList depois do for', postsList)
+  container.innerHTML = html
 
-  //postsList.innerHTML = postsToHTML
+  const handleShowPost = (postId: number) => {
+
+    html = ''
+    html += commentsHeader
+    for (const commentsData of comments) {
+      if(commentsData.postld == postId){
+        html += commentsCard(commentsData)
+      }  
+    }
+ 
+
+    container.innerHTML = html
+
+  }
 
   const postButtons = document.querySelectorAll('.post-btn');
   postButtons.forEach((button) => {
     button.addEventListener('click', function () {
-      //let pList.innerHTML = commentsIndex();
+      handleShowPost(this.id)
+    
     });
   });
 }
