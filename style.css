@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+:root {
+    --colorPrimary: #2c3333;
+    --colorSecundary: #E7F6F2;
+    --colorTertiary: #395B64;
+    --colorhover: #A5C9CA;
+
+    --font-Primary: 'Krona One', sans-serif;
+    --font-Secundary: 'Montserrat', sans-serif;
+}
+
+
+body{
+    box-sizing: border-box;
+    background-color: var(--colorPrimary);
+    color: var(--colorSecundary);
+}
+.Header{
+    padding: 2% 0% 0% 15%;
+}
+.HeaderMenu{
+    display: flex;
+}
+.HeaderMenu_link{
+    box-sizing: border-box;
+    border-radius: 5%;
+    padding: 3px 5px;
+    background: grey;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--colorSecundary);
+    text-decoration: none;
+}
+.presentation{
+    padding: 5% 5%;   
+}
+.presentation_content{
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+}
+.presentation_Title{
+    box-sizing: border-box;
+    background: var(--colorTertiary);
+    font-size: 38px;
+    padding: 3px 15px;
+    border-radius: 2%;
+    font-family: var(--font-Primary);
+}
+.presentation_Text{
+    box-sizing: border-box;
+    border: 2%;
+    font-size: 18px;
+    font-family: var(--fonte-secundaria);
+    
+}
+.presentation_Title_sub{
+    color: red;
+}
+.blogContent{
+    box-sizing: border-box;
+    padding: 3px 15px;
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: #364141;
+    border-radius: 5%;
+}
+.posts{
+  width: 280px;
+  color: red;
+  background: green;
+}
