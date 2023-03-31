@@ -94,7 +94,8 @@ const commentsHeader = `
     </h1>
   </section>
 `
-const container = document.getElementById('main')//element search in the DOM
+//element search in the DOM
+const container = document.getElementById('main')! as HTMLInputElement;
 
 let html = ''
 
