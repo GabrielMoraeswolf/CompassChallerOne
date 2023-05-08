@@ -26,7 +26,7 @@ const comments: Comments[] = [
   {id: 4,postld:1,email:"tec9@email.com",body: "Wait is that a Supraaaaa"},
   {id: 5,postld:1,email:"rodner@email.com",body: "Amazing Car"},
   {id: 6,postld:1,email:"jjCarlos@email.com",body: "<3"},
-  {id: 7,postld:3,email:"joaoTr@email.com",body: "Nice"},
+  {id: 7,postld:3,email:"joaoTr@email.com",body: "Nice, very nice"},
   {id: 8,postld:3,email:"pedrin@email.com",body: "this a F1 street car"},
   {id: 9,postld:5,email:"jackJJ@email.com",body: "muscle american car"},
   {id: 10,postld:4,email:"69x06@email.com",body: "Nice jdm"},
