@@ -1,15 +1,5 @@
-interface Post{
-  id: number;
-  title: string;
-  imageUrl :string;
-  body: string;
-}
-interface Comments{
-  id: number;
-  postld: number;
-  email: string;
-  body: string;
-}
+import Comments from './Comments/interface';
+import Post from './Posts/intetface';
 
 const posts: Post[] = [
   {id: 1,title:"Toyota Supra mk4",imageUrl:"./Assets/supra.jpg",body: "Toyota Supra mk4 image"},
